@@ -140,11 +140,11 @@ BEGIN
 
 		SET @end_time = GETDATE()
 
-		PRINT 'Load duration for table ' + OBJECT_NAME(OBJECT_ID('bronze.erp_px_cat_v1g2')) + ' is ' + CAST(DATEDIFF(SECOND,@start_time, @end_time) as NVARCHAR) + ' seconds';
+		PRINT 'Load duration for table ' + OBJECT_NAME(OBJECT_ID('bronze.erp_px_cat_v1g2')) + ' is ' + CAST(DATEDIFF(SECOND,@start_time, @end_time) as NVARCHAR)     + ' seconds';
 
 		SET @batch_end_time = GETDATE()
 		print '---------------------------------------------------------'
-		PRINT 'Total Load duration for Stored Procedure ' + OBJECT_NAME(OBJECT_ID('bronze.load_bronze')) + ' is ' + CAST(DATEDIFF(SECOND,@batch_start_time, @batch_end_time) as NVARCHAR)     
+		PRINT 'Total Load duration for Stored Procedure ' + OBJECT_NAME(OBJECT_ID('bronze.load_bronze')) + ' is ' + CAST(DATEDIFF(SECOND,@batch_start_time, @batch_end_time) as NVARCHAR) + ' seconds';    
 		print '---------------------------------------------------------'
 	END TRY
 
